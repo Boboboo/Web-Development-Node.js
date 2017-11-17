@@ -51,7 +51,7 @@ Your server this week should not check for palindromes! Your server only exists 
 * Throw if anything is out of bounds (ie, trying to perform an incalculable math operation or accessing data that does not exist).</br>
 * If a function should return a promise, instead of throwing you should return a rejected promise.</br>
 * You must remember to update your package.json file to set `app.js` as your starting script!</br>
-* [Your HTML must be valid] (https://validator.w3.org/#validate_by_input)Links to an external site. or you will lose points on the assignment.
+* [Your HTML must be valid] (https://validator.w3.org/#validate_by_input). or you will lose points on the assignment.
 * Your HTML must make semantical sense; usage of tags for the purpose of simply changing the style of elements (such as `i`, `b`, `font`, `center`, etc) will result in points being deducted; think in terms of content first, then style with your CSS.</br>
 * You can be as creative as you'd like to fulfill front-end requirements; if an implementation is not explicitly stated, however you go about it is fine (provided the HTML is valid and semantical). Design is not a factor in this course.</br>
 * Your client side JavaScript must be in its own file and referenced from the HTML accordingly.
