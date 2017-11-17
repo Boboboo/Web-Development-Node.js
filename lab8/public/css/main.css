@@ -1,0 +1,50 @@
+body{
+    background: url("/public/image/background.jpg") no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2{
+    color:#7674A1;
+}
+
+.container{
+    margin:30px auto;
+    text-align: center;
+
+}
+
+#text-form{
+    margin:50px auto;
+}
+
+.submitBtn{
+    background-color:#7674A1;
+    color:white;
+    outline: medium;
+}
+.submitBtn:hover{
+    background-color:#4A4972;
+    color:white;
+    outline: medium;
+}
+
+#listContainer{
+    background-color:rgba(128, 128, 128, 0.2);
+    border-radius: 40px;
+    font-size: medium;
+    text-align: left;
+}
+
+.is-palindrome {
+    color: #0000FF;
+}
+
+.not-palindrome {
+    color: #FF0000;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;              
+}

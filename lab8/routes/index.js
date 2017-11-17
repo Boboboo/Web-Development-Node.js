@@ -1,0 +1,11 @@
+const palindromeRoutes = require("./palindrome");
+
+const constructorMethod = app => {
+    app.use("/", palindromeRoutes);
+
+    app.use("*", (req, res) => {
+        res.status(404);
+    })
+};
+
+module.exports = constructorMethod;

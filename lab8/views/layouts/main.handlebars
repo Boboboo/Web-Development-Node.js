@@ -1,0 +1,47 @@
+<html>
+<head>
+   <meta charset="utf-8">
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+    <div class="container">
+         <header>
+            <h2>Palindrome Checker</h2>
+        </header>
+
+        <main>
+            <form id="text-form" method="post">
+                 <div class="form-group">
+                    <label for="inputText" class="sr-only">Input Your Phrase</label>
+                    <textarea type="text" class="form-control" id="inputText" name="inputText" placeholder="Please Input Your Phrase Here" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn submitBtn">Submit</button>
+                </div>  
+
+                <div class="form-group hidden" id="error-container">
+                    <div class="alert alert-danger text-goes-here"></div>
+                </div>
+            </form>
+
+            <div id="listContainer">
+                <ul id="listAll"></ul>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>Copyright &copy; Bo Zhang-10411943</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="/public/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+html{
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  background:url("../image/background.jpg") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h3{
+  color:#7A593B;
+
+}
+.form-font{
+  color:#7A593B;
+}
+
+button {
+  background:#7A593B;
+  border-radius: 15px;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: rgb(88, 58, 32);
+}
+
+button,
+button:hover {
+  border: none;
+  color: #fff;
+  padding: 5px 20px;
+  outline: none;
+}
+
+.centered-form {
+  position: relative;
+  text-align: center;
+  background: rgb(230, 207, 188);
+  border: 1px solid rgb(88, 58, 32);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 200px auto;
+  width: 260px;
+  height:350px;
+}
+
+.form-field {
+  margin: 20px 0;
+}
+
+.form-field input{
+  padding: 5px;
+  outline: none;
+} 
+
+.error_message{
+  font-size:15px;
+  background: rgb(238, 177, 177);
+  color:red;
+  border-radius: 8px;
+  border:1px solid red;
+}
+
+.userInfo{
+  background:rgb(230, 207, 188);
+  margin-top:50px;
+  padding:20px;
+}
