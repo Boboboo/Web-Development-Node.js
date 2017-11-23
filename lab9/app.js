@@ -9,7 +9,7 @@ const exphbs = require('express-handlebars');
 const Handlebars = require('handlebars');
 const cookieParser = require('cookie-parser');
 const Strategy = require('passport-local').Strategy;
-const data = require("./data/index.js");
+const data = require("./data/users.js");
 const port = process.env.PORT || 3000;
 
 const app = express();
@@ -72,7 +72,7 @@ passport.serializeUser((user, done) => {
     done(null, user);
 });
 
-passport.deserializeUser(function(user, done) {
+passport.deserializeUser((user, done)=> {
     console.log(`deserializing user: ${user}`);
     let token = user.split('#');
     //console.log(`token: ${token}`);
