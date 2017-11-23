@@ -55,24 +55,25 @@ app.use(expressSession({
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new Strategy(
-    (username, password, done) => {
+    async (username, password, done) => {
         console.log(`username: ${username}`);
         console.log(`password: ${password}`);
-        let res = data.verifyUser(username, password);
+        let res =await data.verifyUser(username, password);
         if(res.result) {
             console.log("true");
             return done(null, res.message);
         }
         return done(null, false, {message: res.message});
-}));
+    }
+));
   
 
-passport.serializeUser((user, done) => {
+passport.serializeUser(async (user, done) => {
     console.log(`serializing user: ${user}`);
     done(null, user);
 });
 
-passport.deserializeUser((user, done)=> {
+passport.deserializeUser(async (user, done)=> {
     console.log(`deserializing user: ${user}`);
     let token = user.split('#');
     //console.log(`token: ${token}`);
@@ -81,7 +82,7 @@ passport.deserializeUser((user, done)=> {
     }
     let username = token[0];
     let password = token[1];
-    let res = data.verifyUser(username, password);
+    let res =await data.verifyUser(username, password);
     if(res.result) {
         return done(null, res.message);
     }

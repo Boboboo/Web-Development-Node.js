@@ -31,11 +31,11 @@ let users = {
 };
 
 
-function getUserInfo(userName){
+async function getUserInfo(userName){
 	return users[userName];
 };
 
-function verifyUser(username, password){
+async function verifyUser(username, password){
 	let user = users[username];
 	if (!user) {
 		return {

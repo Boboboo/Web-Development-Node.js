@@ -5,7 +5,7 @@ const router = express.Router();
 const data = require("../data/users.js");
 
 let configRoutes = (app) => {
-	app.get("/", (req, res) => {
+	app.get("/", async (req, res) => {
 		if (req.isAuthenticated()) {
 			res.redirect('/private');
 		} else {
@@ -22,7 +22,7 @@ let configRoutes = (app) => {
 		})
 	);
 
- 	app.get('/login', (req, res) => {
+ 	app.get('/login', async (req, res) => {
 		if (!req.isAuthenticated()) {
 			if (req.session.flash && req.session.flash.error) {
 				console.log("error: " + req.session.flash.error.slice(-1)[0]);
@@ -38,11 +38,11 @@ let configRoutes = (app) => {
 		}
 	});
 
-  app.get("/private", (req, res) => {
+  app.get("/private",async (req, res) => {
     if (req.isAuthenticated()) {
       console.log(req.user);
       let username = req.user.split('#')[0];
-      let userInfo = data.getUserInfo(username);
+      let userInfo =await data.getUserInfo(username);
       res.render('private.handlebars', {
         id : userInfo.id,
 				username: username,
