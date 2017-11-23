@@ -43,12 +43,17 @@ async function verifyUser(username, password){
 			message: "Username is invalid."
 		};
 	}
-	if (!bcrypt.compareSync(password, user.Password)){
-		return {
-			result: false,
-			message: "Password is invalid."
-		}
-	}	
+	
+	if (!bcrypt.compare(password, user.Password, function (err,res){
+		if (res){
+			return {
+				result: false,
+				message: "Password is invalid."
+			}
+		} else{
+			throw "bcrypt compare  error."
+		}	
+	}))	
 	return {
 		result: true,
 		message: `${username}#${password}`
